@@ -6,6 +6,8 @@
     align-items: center;
     justify-content: space-between;
     background-color: rgb(240, 240, 240);
+    position: fixed;
+    z-index: 100;
 }
 
 #name-heading {
@@ -39,6 +41,6 @@
 }
 
 .active {
-    color: rgb(107, 83, 30);
+    color: rgb(197, 157, 121);
     cursor: default;
 }
