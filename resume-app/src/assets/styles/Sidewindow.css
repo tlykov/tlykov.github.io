@@ -1,0 +1,54 @@
+.trigger {
+    z-index: 95;
+    position: fixed;
+    right: 0px;
+    top: calc(50% - 165px);
+
+    height: 400px;
+    width:min-content;
+
+    border: none;
+    background-color: rgb(233, 233, 233);
+    font-size: 1.2em;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.side-title {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    width: 52px;
+    height: 90%;
+    position: relative;
+    left: -12px;
+    letter-spacing: 0.08rem;
+}
+
+.side-menu {
+    z-index: 99;
+    background-color: rgb(233, 233, 233);
+    height: 400px;
+    width: 260px;
+    position: fixed;
+    right: -260px;
+    top: calc(50% - 165px);
+    transition: transform 0.6s ease;
+    cursor: pointer;
+}
+
+.side-menu.active {
+    transform: translateX(-260px);
+}
+
+.side-menu.inactive {
+    transform: translateX(260px);
+}
+
+#skill-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 20px;
+    margin-top: 26px;
+}

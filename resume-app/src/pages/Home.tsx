@@ -1,6 +1,7 @@
 import React from "react";
 import pic from '../assets/extra/bg-picture-wide.png?url'
 import '../assets/styles/Home.css';
+import { SideWindow } from "../components";
 
 function Home() {
     return (
@@ -10,7 +11,10 @@ function Home() {
                 <h1 id="subtitle">Software Developer</h1>
                 <img id="bg-pic" src={pic}></img>
             </div>
-            <div className="right-sidebar"></div>
+            <div className="right-sidebar">
+                <SideWindow />
+            </div>
+            
         </div>
     );
 }
