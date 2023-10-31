@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../assets/styles/Sidewindow.css';
+import Skill from './Skill';
 
 function SideWindow() {
     const [isActive, setIsActive] = useState(false);
@@ -9,18 +10,18 @@ function SideWindow() {
         <button className="trigger" onClick={onClick}>
             <div className={`side-menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul id="skill-list">
-                    <li>C++</li>
-                    <li>C</li>
-                    <li>Java</li>
-                    <li>Javascript</li>
-                    <li>Typescript</li>
-                    <li>Node.js</li>
-                    <li>Angular</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>React</li>
-                    <li>Python</li>
-                    <li>x86</li>
+                    <Skill text={"C++"} level={3} />
+                    <Skill text={"C"} level={2} />
+                    <Skill text={"Java"} level={2} />
+                    <Skill text={"Python"} level={2} />
+                    <Skill text={"Javascript"} level={3} />
+                    <Skill text={"Typescript"} level={3} />
+                    <Skill text={"HTML"} level={3} />
+                    <Skill text={"CSS"} level={3} />
+                    <Skill text={"Node.js"} level={3} />
+                    <Skill text={"Angular"} level={3} />
+                    <Skill text={"React"} level={2} />
+                    <Skill text={"x86"} level={1} />
                 </ul>
             </div>
         
