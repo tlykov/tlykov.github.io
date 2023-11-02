@@ -10,18 +10,18 @@ function SideWindow() {
         <button className="trigger" onClick={onClick}>
             <div className={`side-menu ${isActive ? 'active' : 'inactive'}`}>
                 <ul id="skill-list">
-                    <Skill text={"C++"} level={3} />
-                    <Skill text={"C"} level={2} />
-                    <Skill text={"Java"} level={2} />
-                    <Skill text={"Python"} level={2} />
-                    <Skill text={"Javascript"} level={3} />
-                    <Skill text={"Typescript"} level={3} />
-                    <Skill text={"HTML"} level={3} />
-                    <Skill text={"CSS"} level={3} />
-                    <Skill text={"Node.js"} level={3} />
-                    <Skill text={"Angular"} level={3} />
-                    <Skill text={"React"} level={2} />
-                    <Skill text={"x86"} level={1} />
+                    <Skill key={0} text={"C++"} level={3} />
+                    <Skill key={1} text={"C"} level={2} />
+                    <Skill key={2} text={"Java"} level={2} />
+                    <Skill key={3} text={"Python"} level={2} />
+                    <Skill key={4} text={"Javascript"} level={3} />
+                    <Skill key={5} text={"Typescript"} level={3} />
+                    <Skill key={6} text={"HTML"}level={3} />
+                    <Skill key={7} text={"CSS"} level={3} />
+                    <Skill key={8} text={"Node.js"} level={3} />
+                    <Skill key={9} text={"Angular"} level={3} />
+                    <Skill key={10} text={"React"} level={2} />
+                    <Skill key={11} text={"x86"} level={1} />
                 </ul>
             </div>
         

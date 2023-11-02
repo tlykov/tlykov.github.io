@@ -1,12 +1,11 @@
-import React from "react";
 import { NavLink } from 'react-router-dom';
 import liIcon from '../assets/icons/linkedin-icon.png?url';
 import ghIcon from '../assets/icons/github-icon.png?url';
 import '../assets/styles/Header.css';
 
 function Header() {
-    var linkedinUrl = "https://www.linkedin.com/in/tim-lykov/";
-    var githubUrl = "https://github.com/tlykov";
+    const linkedinUrl = "https://www.linkedin.com/in/tim-lykov/";
+    const githubUrl = "https://github.com/tlykov";
 
     return (
         <div className="header">

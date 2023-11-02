@@ -1,4 +1,3 @@
-import React from "react";
 import pic from '../assets/extra/bg-picture-wide.png?url'
 import '../assets/styles/Home.css';
 import { SideWindow } from "../components";
