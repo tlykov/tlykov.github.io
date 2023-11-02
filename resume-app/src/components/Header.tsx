@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { motion } from "framer-motion";
 import liIcon from '../assets/icons/linkedin-icon.png?url';
 import ghIcon from '../assets/icons/github-icon.png?url';
 import '../assets/styles/Header.css';
@@ -11,20 +12,20 @@ function Header() {
         <div className="header">
             <h1 className="main-heading" id="name-heading">Timofey Lykov</h1>
             <ul className="nav-links">
-                <li className="nav-item">
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <NavLink className="nav-text" to="/">Home</NavLink>
-                </li>
-                <li className="nav-item">
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <NavLink className="nav-text" to="/contact">Contact</NavLink>
-                </li>
+                </motion.li>
             </ul>
             <div className="social-links">
-                <a className="icon" href={linkedinUrl}>
+                <motion.a className="icon" href={linkedinUrl} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <img src={liIcon} height="30px"></img>
-                </a>
-                <a className="icon" href={githubUrl}>
+                </motion.a>
+                <motion.a className="icon" href={githubUrl} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                     <img src={ghIcon} height="30px"></img>
-                </a>
+                </motion.a>
             </div>
         </div>
     );
