@@ -1,0 +1,44 @@
+#about-div {
+    z-index: 50;
+    position: relative;
+    top: -10px;
+    width: 60%;
+    margin: 0 auto 90px auto;
+    background-color: rgb(240, 240, 240);
+    padding: 10px 5%;
+    min-width: 400px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1000px) {
+    #about-div {
+        width: 60vw;
+        margin-left: calc(20vw - 50px);
+    }
+}
+
+@media (max-width: 640px) {
+    #about-div {
+        padding: 10px 2%;
+        width: 60vw;
+        margin-left: calc(20vw - 50px);
+    }
+}
+
+#course-list {
+    list-style: none;
+    columns: 2;
+}
+
+#course-list li {
+    padding: 6px 4px;
+}
+
+#course-list li::before {
+    content: "\2022";  /* unicode for a bullet */
+    color: rgb(223, 136, 59);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }

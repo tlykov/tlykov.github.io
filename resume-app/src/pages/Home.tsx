@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import pic from '../assets/extra/bg-picture-wide.png?url'
 import file from '../assets/files/resume.pdf?url'
 import '../assets/styles/Home.css';
-import { SideWindow } from "../components";
+import { SideWindow, About } from "../components";
 
 function Home() {
     return (
@@ -16,6 +16,8 @@ function Home() {
                     Download CV
                 </motion.a>
                 <img id="bg-pic" src={pic}></img>
+                <div id="fade"></div>
+                <About/>
             </div>
             <div className="right-sidebar">
                 <SideWindow />
