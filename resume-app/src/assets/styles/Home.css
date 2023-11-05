@@ -39,3 +39,24 @@
     z-index: 1;
     cursor: default;
 }
+
+.download-btn {
+    display: block;
+    position: relative;
+    left: 122px;
+    top: 200px;
+    z-index: 50;
+    
+    color:rgb(244, 251, 255);
+    border: 2px rgb(244, 251, 255) solid;
+    border-radius: 5px;
+    backdrop-filter: blur(2px);
+
+    text-wrap: nowrap;
+    text-decoration: none;
+    font-size: 1.2em;
+
+    width: fit-content;
+    height: fit-content;
+    padding: 14px 20px;
+}
