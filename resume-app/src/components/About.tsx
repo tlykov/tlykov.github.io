@@ -5,9 +5,12 @@ function About() {
     return (
         <div id="about-div">
             <h2>Education</h2>
-            <p>Bachelor of Science, Computing Science</p>
-            <p>Simon Fraser University</p>
-            <p>Coursework in:</p>
+            <p id='degree'>Bachelor of Science, Computing Science</p>
+            <div id='school'>
+                <p>Simon Fraser University</p>
+                <p>September 2018 - April 2023</p>
+            </div>
+            <p id='course-p'>Coursework in:</p>
             <ul id="course-list">
                 <li>Software Testing and Security</li>
                 <li>Modern C++ Development Methods</li>

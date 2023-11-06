@@ -3,9 +3,9 @@
     position: relative;
     top: -10px;
     width: 60%;
-    margin: 0 auto 90px auto;
+    margin: 0 auto 5% auto;
     background-color: rgb(240, 240, 240);
-    padding: 10px 5%;
+    padding: 24px 5%;
     min-width: 400px;
     border-radius: 4px;
 }
@@ -41,4 +41,39 @@
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-  }
+}
+
+#about-div > h2 {
+    font-size: 1.5em;
+}
+
+#degree {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: rgb(223, 136, 59);
+}
+
+#school {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 1.2em;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#school > p:nth-child(1) {
+    margin-right: 28%;
+}
+
+#school > p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#course-p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
