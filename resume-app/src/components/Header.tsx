@@ -1,22 +1,79 @@
-import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { motion } from "framer-motion";
 import liIcon from '../assets/icons/linkedin-icon.png?url';
 import ghIcon from '../assets/icons/github-icon.png?url';
 import '../assets/styles/Header.css';
+import { aboutRef } from './About';
+
 
 function Header() {
     const linkedinUrl = "https://www.linkedin.com/in/tim-lykov/";
     const githubUrl = "https://github.com/tlykov";
 
+    const [inView, setInView] = useState("home");
+    const navigate = useNavigate();
+    
+    const baseColor = "rgb(0,0,0)";
+    const accentColor = "rgb(223, 136, 59)";
+
+    const scrollToAbout = () => {
+        if(aboutRef.current == null) {
+            navigate('/');
+            setTimeout( () => { 
+                window.scrollTo({
+                    top: aboutRef.current.offsetTop,
+                    behavior: 'smooth',
+                }) 
+            }, 10);
+        } else {
+            window.scrollTo({
+                top: aboutRef.current.offsetTop,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+    };
+
+    const listenScrollEvent = () => {
+        if(aboutRef.current != null && inView != "contact") {
+            if (window.scrollY > aboutRef.current.offsetTop - 340) {
+                setInView("about");
+            } else {
+                setInView("home");
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', listenScrollEvent,false);
+
+    const homeClick = () => {
+        setInView("home");
+        scrollToTop();
+    }
+
+    const contactClick = () => {
+        setInView("contact");
+    }
+
     return (
         <div className="header">
             <h1 className="main-heading" id="name-heading">Timofey Lykov</h1>
             <ul className="nav-links">
-                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                    <NavLink className="nav-text" to="/">Home</NavLink>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={homeClick}>
+                    <NavLink className="nav-text" to="/" style={{color: `${inView=="home" ? accentColor : baseColor}`}}>Home</NavLink>
                 </motion.li>
-                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
-                    <NavLink className="nav-text" to="/contact">Contact</NavLink>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToAbout}>
+                    <span className="nav-text" style={{color: `${inView=="about" ? accentColor : baseColor}`}}>About</span>
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={contactClick}>
+                    <NavLink className="nav-text" to="/contact" style={{color: `${inView=="contact" ? accentColor : baseColor}`}}>Contact</NavLink>
                 </motion.li>
             </ul>
             <div className="social-links">

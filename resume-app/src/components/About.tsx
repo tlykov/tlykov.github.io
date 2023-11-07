@@ -1,9 +1,13 @@
+import { useRef } from 'react';
 import '../assets/styles/About.css';
 
+export var aboutRef:any;
+
 function About() {
+    aboutRef = useRef(null);
 
     return (
-        <div id="about-div">
+        <div id="about-div" ref={aboutRef}>
             <h2>Education</h2>
             <p id='degree'>Bachelor of Science, Computing Science</p>
             <div id='school'>

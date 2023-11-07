@@ -40,7 +40,6 @@
     color: rgb(0, 0, 0);
 }
 
-.nav-item .active {
-    color: rgb(223, 136, 59);
-    cursor: default;
+.nav-item {
+    cursor: pointer;
 }
