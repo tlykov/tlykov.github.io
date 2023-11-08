@@ -9,7 +9,7 @@ export const ProjectList : Project[] = [
     {
         title: "Portfolio Site", 
         description: "Simple personal website made using Vite React and deployed with GitHub Pages",
-        link: "https://portfolio.tlykov.ca",
+        link: "https://github.com/tlykov/tlykov.github.io",
         inProgress: false
     },
     {
