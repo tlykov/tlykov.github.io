@@ -3,7 +3,7 @@ interface Skill {
     level: number
 };
 
-export const SkillList:Skill[] = [
+export const SkillList : Skill[] = [
     {name: "C++", level: 3},
     {name: "C", level: 2},
     {name: "Java", level: 2},

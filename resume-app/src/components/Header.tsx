@@ -5,6 +5,7 @@ import liIcon from '../assets/icons/linkedin-icon.png?url';
 import ghIcon from '../assets/icons/github-icon.png?url';
 import '../assets/styles/Header.css';
 import { aboutRef } from './About';
+import { projectsRef } from './Projects';
 
 
 function Header() {
@@ -22,13 +23,30 @@ function Header() {
             navigate('/');
             setTimeout( () => { 
                 window.scrollTo({
-                    top: aboutRef.current.offsetTop,
+                    top: aboutRef.current.offsetTop - 140,
                     behavior: 'smooth',
                 }) 
             }, 10);
         } else {
             window.scrollTo({
-                top: aboutRef.current.offsetTop,
+                top: aboutRef.current.offsetTop - 140,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    const scrollToProjects = () => {
+        if(projectsRef.current == null) {
+            navigate('/');
+            setTimeout( () => { 
+                window.scrollTo({
+                    top: projectsRef.current.offsetTop - 120,
+                    behavior: 'smooth',
+                }) 
+            }, 10);
+        } else {
+            window.scrollTo({
+                top: projectsRef.current.offsetTop - 120,
                 behavior: 'smooth',
             });
         }
@@ -43,7 +61,9 @@ function Header() {
 
     const listenScrollEvent = () => {
         if(aboutRef.current != null && inView != "contact") {
-            if (window.scrollY > aboutRef.current.offsetTop - 340) {
+            if (window.scrollY > projectsRef.current.offsetTop - 400) {
+                setInView("projects");
+            } else if (window.scrollY > aboutRef.current.offsetTop - 340) {
                 setInView("about");
             } else {
                 setInView("home");
@@ -71,6 +91,9 @@ function Header() {
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToAbout}>
                     <span className="nav-text" style={{color: `${inView=="about" ? accentColor : baseColor}`}}>About</span>
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToProjects}>
+                    <span className="nav-text" style={{color: `${inView=="projects" ? accentColor : baseColor}`}}>Projects</span>
                 </motion.li>
                 <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={contactClick}>
                     <NavLink className="nav-text" to="/contact" style={{color: `${inView=="contact" ? accentColor : baseColor}`}}>Contact</NavLink>

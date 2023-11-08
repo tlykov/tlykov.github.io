@@ -2,7 +2,7 @@ import { motion, Variants } from "framer-motion";
 import pic from '../assets/extra/bg-picture-wide.png?url'
 import file from '../assets/files/resume.pdf?url'
 import '../assets/styles/Home.css';
-import { SideWindow, About } from "../components";
+import { SideWindow, About, Projects } from "../components";
 
 const btnVariants: Variants = {
     hidden: {
@@ -59,6 +59,7 @@ function Home() {
                 <img id="bg-pic" src={pic}></img>
                 <div id="fade"></div>
                 <About/>
+                <Projects/>
             </div>
             <div className="right-sidebar">
                 <SideWindow />
