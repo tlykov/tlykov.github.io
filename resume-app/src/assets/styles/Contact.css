@@ -19,7 +19,14 @@
     bottom: -200px;
     background-color: rgb(255, 255, 255);
     padding: 20px 50px;
-    border-radius: 3px;
+    border-radius: 4px;
+}
+
+@media (max-width: 780px) {
+    #content {
+        width: 40vw;
+        margin-left: calc(30vw - 50px);
+    }
 }
 
 .icon {
