@@ -86,3 +86,13 @@ h2 {
     text-wrap: balance;
     margin: 0 7% 0 13%;
 }
+
+#project-list::-webkit-scrollbar {
+    background-color: rgb(193, 210, 219);
+    height: 6px;
+}
+
+#project-list::-webkit-scrollbar-thumb {
+    background-color: rgb(223, 136, 59);
+    border-radius: 20px;
+}
