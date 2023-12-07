@@ -13,9 +13,15 @@ export const ProjectList : Project[] = [
         inProgress: false
     },
     {
-        title: "Parallel Algorithms",
-        description: "Various parallelized algorithms using C++",
-        link: "",
-        inProgress: true
+        title: "Notes Site",
+        description: "Note storing site made with Angular. Uses Node, MongoDB and Docker",
+        link: "https://github.com/tlykov/notes-site",
+        inProgress: false
+    },
+    {
+        title: "UI Prototype",
+        description: "Prototype UI redesign of Moodle's learning app made using Figma",
+        link: "https://www.figma.com/proto/Iu6RrGOvzbeB6Uu95WFIAj/CMPT363-Prototype?type=design&node-id=23-29&t=OYjozij8aZpNhSpO-1&scaling=scale-down&page-id=0:1&starting-point-node-id=3:4&mode=design",
+        inProgress: false
     }
 ];
