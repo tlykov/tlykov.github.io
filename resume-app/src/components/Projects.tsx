@@ -35,7 +35,7 @@ function Projects() {
                             <p className="project-title">{project.title}</p>
                             <p className="project-desc">{project.description}</p>
                         </div>
-                        <a className="project-link" href={project.link}>Link</a>
+                        <a className="project-link" href={project.link} target="_blank" rel="noopener">Link</a>
                     </motion.div>
                 )}
             </div>

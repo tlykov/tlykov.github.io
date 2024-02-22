@@ -52,7 +52,7 @@ function Home() {
             <div className="left-sidebar"></div>
             <div className="main-content">
                 <h1 id="subtitle">Software Developer</h1>
-                <motion.a className="download-btn" href={file} download="tlykov-cv"
+                <motion.a className="download-btn" href={file} download="tlykov-cv.pdf" target="_blank" type="application/pdf"
                     variants={btnVariants} initial={'hidden'} animate={'show'} whileHover={'hover'} whileTap={'tap'}>
                     Download CV
                 </motion.a>

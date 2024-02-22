@@ -7,6 +7,12 @@ interface Project {
 
 export const ProjectList : Project[] = [
     {
+        title: "SamJPFitness Site", 
+        description: "Ongoing development for SamJPFitness company site",
+        link: "https://samjpfitness.com",
+        inProgress: true
+    },
+    {
         title: "Portfolio Site", 
         description: "Simple personal website made using Vite React and deployed with GitHub Pages",
         link: "https://github.com/tlykov/tlykov.github.io",
