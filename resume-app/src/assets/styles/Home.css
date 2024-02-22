@@ -71,3 +71,9 @@
      rgba(193, 210, 219, 1)
     );
 }
+
+@media only screen and (max-width: 414px) {
+    .left-sidebar, .right-sidebar {
+        display: none;
+    }
+}

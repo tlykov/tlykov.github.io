@@ -6,12 +6,14 @@ import ghIcon from '../assets/icons/github-icon.png?url';
 import '../assets/styles/Header.css';
 import { aboutRef } from './About';
 import { projectsRef } from './Projects';
-
+import { mobileQuery } from '../utils/ResponsiveView';
+import { useMediaQuery } from 'react-responsive'
 
 function Header() {
     const linkedinUrl = "https://www.linkedin.com/in/tim-lykov/";
     const githubUrl = "https://github.com/tlykov";
 
+    const [dropdown, setDropdown] = useState(false);
     const [inView, setInView] = useState("home");
     const navigate = useNavigate();
     
@@ -82,7 +84,36 @@ function Header() {
         setInView("contact");
     }
 
+    const isMobile = useMediaQuery({ query: mobileQuery });
+
     return (
+        <>
+    
+        {isMobile ? 
+        
+        <div className="header">
+            <div className='row1'>
+                <h1 className="main-heading" id="name-heading">Timofey Lykov</h1>
+                <div id='dropBtn' onClick={() => {setDropdown(true)}}></div>
+            </div>
+            <ul className="nav-links-mobile" style={{display: `${dropdown ? "flex" : "none"}`}}>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={homeClick}>
+                    <NavLink className="nav-text" to="/" style={{color: `${inView=="home" ? accentColor : baseColor}`}}>Home</NavLink>
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToAbout}>
+                    <span className="nav-text" style={{color: `${inView=="about" ? accentColor : baseColor}`}}>About</span>
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={scrollToProjects}>
+                    <span className="nav-text" style={{color: `${inView=="projects" ? accentColor : baseColor}`}}>Projects</span>
+                </motion.li>
+                <motion.li className="nav-item" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={contactClick}>
+                    <NavLink className="nav-text" to="/contact" style={{color: `${inView=="contact" ? accentColor : baseColor}`}}>Contact</NavLink>
+                </motion.li>
+            </ul>
+        </div>
+        
+        :
+        
         <div className="header">
             <h1 className="main-heading" id="name-heading">Timofey Lykov</h1>
             <ul className="nav-links">
@@ -108,6 +139,9 @@ function Header() {
                 </motion.a>
             </div>
         </div>
+
+        }
+    </>
     );
 }
 

@@ -3,6 +3,8 @@ import pic from '../assets/extra/bg-picture-wide.png?url'
 import file from '../assets/files/resume.pdf?url'
 import '../assets/styles/Home.css';
 import { SideWindow, About, Projects } from "../components";
+import { mobileQuery } from "../utils/ResponsiveView";
+import { useMediaQuery } from "react-responsive";
 
 const btnVariants: Variants = {
     hidden: {
@@ -47,6 +49,8 @@ const btnVariants: Variants = {
 }
 
 function Home() {
+    const isMobile = useMediaQuery({query: mobileQuery});
+
     return (
         <div id="home-div">
             <div className="left-sidebar"></div>
@@ -62,9 +66,9 @@ function Home() {
                 <Projects/>
             </div>
             <div className="right-sidebar">
-                <SideWindow />
+                {!isMobile && <SideWindow />}
             </div>
-            
+            {isMobile && <SideWindow />}
         </div>
     );
 }
