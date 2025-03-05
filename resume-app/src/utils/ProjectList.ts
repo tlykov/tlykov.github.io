@@ -7,9 +7,9 @@ interface Project {
 
 export const ProjectList : Project[] = [
     {
-        title: "SamJPFitness Site", 
-        description: "Ongoing development for SamJPFitness company site",
-        link: "https://samjpfitness.com",
+        title: "Legacy Kinetics Site", 
+        description: "Ongoing development and maintenance for Legacy Kinetics business site",
+        link: "https://legacy-kinetics.com",
         inProgress: true
     },
     {

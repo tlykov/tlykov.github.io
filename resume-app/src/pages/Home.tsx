@@ -1,6 +1,6 @@
 import { motion, Variants } from "framer-motion";
-import pic from '../assets/extra/bg-picture-wide.png?url'
-import file from '../assets/files/resume.pdf?url'
+import pic from '../assets/extra/IMG_1527.JPEG?url'
+import file from '../assets/files/tlykov-resume.pdf?url'
 import '../assets/styles/Home.css';
 import { SideWindow, About, Projects } from "../components";
 

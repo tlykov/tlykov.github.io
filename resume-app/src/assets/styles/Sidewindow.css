@@ -4,7 +4,7 @@
     right: 0px;
     top: calc(50% - 165px);
 
-    height: 400px;
+    height: 460px;
     width:min-content;
 
     border: none;
@@ -29,7 +29,7 @@
 .side-menu {
     z-index: 99;
     background-color: rgb(233, 233, 233);
-    height: 400px;
+    height: 460px;
     width: 260px;
     position: fixed;
     right: -260px;

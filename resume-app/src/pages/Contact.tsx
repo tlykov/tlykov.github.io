@@ -12,7 +12,7 @@ function Contact() {
                 <div id="content" className="main-content">
                     <div className='flex-line'>
                         <img className='icon' src={emailIcon}/>
-                        <span className="copy-text">tlykov@sfu.ca</span>
+                        <span className="copy-text">t.lykov21@gmail.com</span>
                     </div>
 
                     <div className='flex-line'>
