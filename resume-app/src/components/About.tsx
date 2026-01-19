@@ -42,7 +42,7 @@ function About() {
             <p className='degree'>Diploma in Accounting</p>
             <div className='school'>
                 <p>UBC Sauder School of Business</p>
-                <p>Sep 2025 - Jan 2026</p>
+                <p>Sep 2025 - Jan 2027</p>
             </div>
             <p className='course-p'>Coursework in:</p>
             <motion.ul className="course-list" variants={ulVariants}>
