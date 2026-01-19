@@ -25,16 +25,16 @@
     }
 }
 
-#course-list {
+.course-list {
     list-style: none;
     columns: 2;
 }
 
-#course-list li {
+.course-list li {
     padding: 6px 4px;
 }
 
-#course-list li::before {
+.course-list li::before {
     content: "\2022";  /* unicode for a bullet */
     color: rgb(223, 136, 59);
     font-weight: bold;
@@ -47,33 +47,33 @@
     font-size: 1.5em;
 }
 
-#degree {
+.degree {
     font-size: 1.4em;
     margin-bottom: 20px;
     color: rgb(223, 136, 59);
 }
 
-#school {
+.school {
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 1.2em;
     width: 90%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
 }
-
-#school > p:nth-child(1) {
+/*
+.school > p:nth-child(1) {
     margin-right: 28%;
 }
-
-#school > p {
+*/
+.school > p {
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
-#course-p {
+.course-p {
     font-size: 1.2em;
     margin-top: 20px;
 }

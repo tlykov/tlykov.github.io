@@ -19,6 +19,12 @@ export const ProjectList : Project[] = [
         inProgress: false
     },
     {
+        title: "Web Scraping Tool",
+        description: "Python tool for fetching rezoning application information for Vancouver",
+        link: "https://github.com/tlykov/shapeyourcity-rezoning",
+        inProgress: false
+    },
+    {
         title: "Notes Site",
         description: "Note storing site made with Angular. Uses Node, MongoDB and Docker",
         link: "https://github.com/tlykov/notes-site",

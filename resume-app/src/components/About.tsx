@@ -39,13 +39,26 @@ function About() {
         <motion.div id="about-div" ref={aboutRef} 
         initial="offscreen" whileInView="onscreen" viewport={{ once: true, amount: 0.6 }}>
             <h2>Education</h2>
-            <p id='degree'>Bachelor of Science, Computing Science</p>
-            <div id='school'>
-                <p>Simon Fraser University</p>
-                <p>September 2018 - April 2023</p>
+            <p className='degree'>Diploma in Accounting</p>
+            <div className='school'>
+                <p>UBC Sauder School of Business</p>
+                <p>Sep 2025 - Jan 2026</p>
             </div>
-            <p id='course-p'>Coursework in:</p>
-            <motion.ul id="course-list" variants={ulVariants}>
+            <p className='course-p'>Coursework in:</p>
+            <motion.ul className="course-list" variants={ulVariants}>
+                <motion.li variants={liVariants}>Financial Accounting</motion.li>
+                <motion.li variants={liVariants}>Managerial Accounting</motion.li>
+                <motion.li variants={liVariants}>Statistics</motion.li>
+                <motion.li variants={liVariants}>Business Law</motion.li>
+            </motion.ul>
+
+            <p className='degree'>Bachelor of Science, Computing Science</p>
+            <div className='school'>
+                <p>Simon Fraser University</p>
+                <p>Sep 2018 - Apr 2023</p>
+            </div>
+            <p className='course-p'>Coursework in:</p>
+            <motion.ul className="course-list" variants={ulVariants}>
                 <motion.li variants={liVariants}>Software Testing and Security</motion.li>
                 <motion.li variants={liVariants}>Modern C++ Development Methods</motion.li>
                 <motion.li variants={liVariants}>Web Development</motion.li>
